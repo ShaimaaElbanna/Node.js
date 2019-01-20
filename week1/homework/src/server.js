@@ -12,8 +12,8 @@ function successState(response, state) {
 }
 
 function errorState(response) {
-  response.writeHead(400, { "Content-Type": "application/json" });
-  response.end(JSON.stringify({ error: "404, Not found" }));
+  response.writeHead(404, { "Content-Type": "application/json" });
+  response.end(JSON.stringify({ error: "Not found" }));
 }
 
 function createServer(port) {
